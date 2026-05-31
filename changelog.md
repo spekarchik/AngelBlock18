@@ -1,3 +1,12 @@
+## 📦 Version 3.9.1
+
+### 🐞 Fixed
+- **Magnetic Rods** tooltip now correctly states that Amethyst geodes are detected by Amethyst blocks rather than Calcite or Smooth Basalt.
+
+### 📝 Improvements
+- Moved the detection info section below the rod stats in the tooltip.
+
+
 ## 📦 Version 3.9.0
 
 ### 🐞 Fixed
