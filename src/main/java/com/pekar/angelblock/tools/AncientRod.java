@@ -282,12 +282,18 @@ public class AncientRod extends MagneticRod
             // Magnetic
             if (!isEnhanced())
                 tooltip.addLineById("description.rods.no_magnet_mode").withFormatting(ChatFormatting.DARK_RED, true).apply();
-            else if (this instanceof FireRod)
-                tooltip.addLineById("description.rods.magnet_mode.fire_rod").asDarkGrey().apply();
-            else
-                tooltip.addLineById("description.rods.magnet_mode.ancient_rod").asDarkGrey().apply();
 
             appendMagneticInfo(tooltip);
+
+            tooltip.addEmptyLine();
+
+            if (isEnhanced())
+            {
+                if (this instanceof FireRod)
+                    tooltip.addLineById("description.rods.magnet_mode.fire_rod").asDarkGrey().apply();
+                else
+                    tooltip.addLineById("description.rods.magnet_mode.ancient_rod").asDarkGrey().apply();
+            }
         }
 
         // Common
