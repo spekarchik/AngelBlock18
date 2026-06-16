@@ -1,5 +1,7 @@
 ## 📦 Version 3.9.1
 
+- Now supports Minecraft 26.2
+
 ### 🐞 Fixed
 - **Magnetic Rods** tooltip now correctly states that Amethyst geodes are detected by Amethyst blocks rather than Calcite or Smooth Basalt.
 
