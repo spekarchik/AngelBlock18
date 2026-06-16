@@ -12,6 +12,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.animal.axolotl.Axolotl;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -39,7 +40,7 @@ public class BlueAxolotlBucket extends ModItem implements ITooltipProvider
 
         if (level instanceof ServerLevel serverLevel && player instanceof ServerPlayer serverPlayer)
         {
-            var axolotl = EntityType.AXOLOTL.create(serverLevel, EntitySpawnReason.BUCKET);
+            var axolotl = EntityTypes.AXOLOTL.create(serverLevel, EntitySpawnReason.BUCKET);
             if (axolotl != null)
             {
                 axolotl.setPos(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5);

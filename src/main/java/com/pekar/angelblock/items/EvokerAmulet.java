@@ -14,6 +14,7 @@ import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.animal.allay.Allay;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -44,7 +45,7 @@ public class EvokerAmulet extends ModItem implements ITooltipProvider
 
             if (allays.size() < 3)
             {
-                var allay = EntityType.ALLAY.spawn(serverLevel, itemStack, player, player.blockPosition().relative(player.getDirection(), 2).above(), EntitySpawnReason.SPAWN_ITEM_USE, true, true);
+                var allay = EntityTypes.ALLAY.spawn(serverLevel, itemStack, player, player.blockPosition().relative(player.getDirection(), 2).above(), EntitySpawnReason.SPAWN_ITEM_USE, true, true);
                 if (allay != null)
                 {
                     level.getChunk(player.getOnPos()).addEntity(allay);

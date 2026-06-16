@@ -4,7 +4,7 @@ import com.pekar.angelblock.events.cleaners.Cleaner;
 import com.pekar.angelblock.events.cleaners.TrackedBlock;
 import com.pekar.angelblock.tooltip.ITooltipProvider;
 import com.pekar.angelblock.utils.Utils;
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.component.DataComponents;

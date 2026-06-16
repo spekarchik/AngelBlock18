@@ -11,7 +11,7 @@ public class CooldownEffect extends MobEffect
     }
 
     @Override
-    public boolean isInstantenous()
+    public boolean isInstantaneous()
     {
         return false;
     }

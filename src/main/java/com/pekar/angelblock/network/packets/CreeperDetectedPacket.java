@@ -13,7 +13,7 @@ public class CreeperDetectedPacket extends ServerToClientPacket
     @Override
     public void onReceive(IPayloadContext context)
     {
-        if (Minecraft.getInstance().screen instanceof PauseScreen) return;
+        if (Minecraft.getInstance().gui.screen() instanceof PauseScreen) return;
 
         Minecraft.getInstance().player.playSound(SoundEvents.NOTE_BLOCK_BELL.value(), 1.0F, 15.0F);
     }

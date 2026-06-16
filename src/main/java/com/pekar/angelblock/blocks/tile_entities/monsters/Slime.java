@@ -4,8 +4,8 @@ import com.pekar.angelblock.blocks.tile_entities.spawn.ISpawnStrategy;
 import com.pekar.angelblock.blocks.tile_entities.spawn.OnGroundMonsterSpawnStrategy;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.monster.MagmaCube;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
@@ -19,8 +19,7 @@ public class Slime extends Monster
     @Override
     public boolean belongs(LivingEntity livingEntity)
     {
-        return livingEntity instanceof net.minecraft.world.entity.monster.Slime
-                && !(livingEntity instanceof MagmaCube);
+        return livingEntity instanceof net.minecraft.world.entity.monster.cubemob.Slime;
     }
 
     @Override
@@ -32,7 +31,7 @@ public class Slime extends Monster
     @Override
     public EntityType<? extends Entity> getEntityType()
     {
-        return EntityType.SLIME;
+        return EntityTypes.SLIME;
     }
 
     @Override

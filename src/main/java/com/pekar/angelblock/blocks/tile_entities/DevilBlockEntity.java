@@ -229,7 +229,7 @@ public class DevilBlockEntity extends BlockEntity implements ILivingDeathEventHa
             }
             else if (targetState.is(BlockTags.TERRACOTTA))
             {
-                level.setBlock(targetPos, Blocks.BLACK_TERRACOTTA.defaultBlockState(), Block.UPDATE_ALL);
+                level.setBlock(targetPos, Blocks.DYED_TERRACOTTA.black().defaultBlockState(), Block.UPDATE_ALL);
             }
             else if (isPlant(targetState))
             {

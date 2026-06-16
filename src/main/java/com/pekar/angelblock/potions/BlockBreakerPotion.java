@@ -126,7 +126,7 @@ public class BlockBreakerPotion extends ThrowableItemProjectile
             double scale = 1.0 - (distance / radius); // Чем ближе к эпицентру, тем сильнее толкает
             double power = strength * scale * 0.5; // Настроить силу
 
-            entity.knockback(power, dx, dz);
+            entity.knockback(power, dx, dz, entity.createDamageSource(), 0.0F);
         }
     }
 

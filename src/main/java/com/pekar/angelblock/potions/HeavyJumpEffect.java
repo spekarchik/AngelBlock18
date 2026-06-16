@@ -32,7 +32,7 @@ public class HeavyJumpEffect extends MobEffect
     }
 
     @Override
-    public boolean isInstantenous()
+    public boolean isInstantaneous()
     {
         return false;
     }

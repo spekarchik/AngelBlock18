@@ -5,7 +5,7 @@ import com.pekar.angelblock.tooltip.TextStyle;
 import com.pekar.angelblock.utils.Utils;
 import com.pekar.angelblock.tools.properties.DefaultMaterialProperties;
 import com.pekar.angelblock.tools.properties.IMaterialProperties;
-import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.advancements.triggers.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.server.level.ServerPlayer;

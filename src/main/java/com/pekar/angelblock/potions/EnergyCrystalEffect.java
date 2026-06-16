@@ -18,7 +18,7 @@ public class EnergyCrystalEffect extends ModMobEffect
     }
 
     @Override
-    public boolean isInstantenous()
+    public boolean isInstantaneous()
     {
         return false;
     }

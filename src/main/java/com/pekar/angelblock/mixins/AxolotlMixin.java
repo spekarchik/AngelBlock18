@@ -10,6 +10,7 @@ import net.minecraft.world.Difficulty;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntitySpawnReason;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.axolotl.Axolotl;
@@ -34,7 +35,7 @@ public abstract class AxolotlMixin extends Animal
     private void injectBreedOffspring(ServerLevel level, AgeableMob partner, CallbackInfoReturnable<AgeableMob> cir)
     {
         Axolotl axolotl = (Axolotl) (Object) this;
-        Axolotl offspring = EntityType.AXOLOTL.create(level, EntitySpawnReason.BREEDING);
+        Axolotl offspring = EntityTypes.AXOLOTL.create(level, EntitySpawnReason.BREEDING);
         if (offspring != null)
         {
             Axolotl.Variant variant;

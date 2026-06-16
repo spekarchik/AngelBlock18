@@ -60,7 +60,7 @@ public class BlockRegistry
             BlockBehaviour.Properties.of().mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
                     .strength(10F, 1200F).lightLevel(blockState -> 10));
     public static final DeferredBlock<Block> ANGEL_ROD_BLOCK = registerSkipTab("angel_rod_block", AngelRodBlock::new,
-            BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHTNING_ROD).strength(0.1F, 1200F).sound(SoundType.COPPER)
+            BlockBehaviour.Properties.ofFullCopy(Blocks.LIGHTNING_ROD.weathering().unaffected()).strength(0.1F, 1200F).sound(SoundType.COPPER)
                     .lightLevel(state -> 15));
 
     public static final DeferredBlock<Block> GREEN_DIAMOND_ORE = register("green_diamond_ore", GreenDiamondBlock::new, GreenDiamondOreBlockItem::new,

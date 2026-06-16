@@ -4,6 +4,7 @@ import com.pekar.angelblock.blocks.tile_entities.spawn.ISpawnStrategy;
 import com.pekar.angelblock.blocks.tile_entities.spawn.OnGroundMonsterSpawnStrategy;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.hoglin.HoglinBase;
 import net.minecraft.world.item.Item;
@@ -31,7 +32,7 @@ public class Hoglin extends Monster
     @Override
     public EntityType<? extends Entity> getEntityType()
     {
-        return EntityType.HOGLIN;
+        return EntityTypes.HOGLIN;
     }
 
     @Override

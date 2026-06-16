@@ -4,6 +4,7 @@ import com.pekar.angelblock.blocks.tile_entities.spawn.ISpawnStrategy;
 import com.pekar.angelblock.blocks.tile_entities.spawn.InWaterMonsterSpawnStrategy;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.EntityTypes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.ElderGuardian;
 import net.minecraft.world.item.Item;
@@ -32,7 +33,7 @@ public class Guardian extends Monster
     @Override
     public EntityType<? extends Entity> getEntityType()
     {
-        return EntityType.GUARDIAN;
+        return EntityTypes.GUARDIAN;
     }
 
     @Override

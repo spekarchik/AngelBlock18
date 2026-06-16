@@ -111,67 +111,67 @@ public class BlockTypes
 
     public Block getDestroyingWoolBlock(Block block)
     {
-        if (block == Blocks.WHITE_WOOL)
+        if (block == Blocks.WOOL.white())
         {
             return BlockRegistry.DESTROYING_WHITE_WOOL_BY_ROD.get();
         }
-        else if (block == Blocks.ORANGE_WOOL)
+        else if (block == Blocks.WOOL.orange())
         {
             return BlockRegistry.DESTROYING_ORANGE_WOOL.get();
         }
-        else if (block == Blocks.MAGENTA_WOOL)
+        else if (block == Blocks.WOOL.magenta())
         {
             return BlockRegistry.DESTROYING_MAGENTA_WOOL.get();
         }
-        else if (block == Blocks.LIGHT_BLUE_WOOL)
+        else if (block == Blocks.WOOL.lightBlue())
         {
             return BlockRegistry.DESTROYING_LIGHT_BLUE_WOOL.get();
         }
-        else if (block == Blocks.YELLOW_WOOL)
+        else if (block == Blocks.WOOL.yellow())
         {
             return BlockRegistry.DESTROYING_YELLOW_WOOL.get();
         }
-        else if (block == Blocks.LIME_WOOL)
+        else if (block == Blocks.WOOL.lime())
         {
             return BlockRegistry.DESTROYING_LIME_WOOL.get();
         }
-        else if (block == Blocks.PINK_WOOL)
+        else if (block == Blocks.WOOL.pink())
         {
             return BlockRegistry.DESTROYING_PINK_WOOL.get();
         }
-        else if (block == Blocks.GRAY_WOOL)
+        else if (block == Blocks.WOOL.gray())
         {
             return BlockRegistry.DESTROYING_GRAY_WOOL.get();
         }
-        else if (block == Blocks.LIGHT_GRAY_WOOL)
+        else if (block == Blocks.WOOL.lightGray())
         {
             return BlockRegistry.DESTROYING_LIGHT_GRAY_WOOL.get();
         }
-        else if (block == Blocks.CYAN_WOOL)
+        else if (block == Blocks.WOOL.cyan())
         {
             return BlockRegistry.DESTROYING_CYAN_WOOL.get();
         }
-        else if (block == Blocks.PURPLE_WOOL)
+        else if (block == Blocks.WOOL.purple())
         {
             return BlockRegistry.DESTROYING_PURPLE_WOOL.get();
         }
-        else if (block == Blocks.BLUE_WOOL)
+        else if (block == Blocks.WOOL.blue())
         {
             return BlockRegistry.DESTROYING_BLUE_WOOL.get();
         }
-        else if (block == Blocks.BROWN_WOOL)
+        else if (block == Blocks.WOOL.brown())
         {
             return BlockRegistry.DESTROYING_BROWN_WOOL.get();
         }
-        else if (block == Blocks.GREEN_WOOL)
+        else if (block == Blocks.WOOL.green())
         {
             return BlockRegistry.DESTROYING_GREEN_WOOL.get();
         }
-        else if (block == Blocks.RED_WOOL)
+        else if (block == Blocks.WOOL.red())
         {
             return BlockRegistry.DESTROYING_RED_WOOL.get();
         }
-        else if (block == Blocks.BLACK_WOOL)
+        else if (block == Blocks.WOOL.black())
         {
             return BlockRegistry.DESTROYING_BLACK_WOOL.get();
         }
