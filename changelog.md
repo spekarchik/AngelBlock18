@@ -1,3 +1,9 @@
+## 📦 Version 3.9.2
+
+### 🐞 Fixed
+- Fixed *Diamond Powder Block* blasting recipe
+
+
 ## 📦 Version 3.9.1
 
 - Now supports Minecraft 26.2
