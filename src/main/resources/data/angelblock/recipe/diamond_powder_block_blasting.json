@@ -1,6 +1,5 @@
 {
     "type": "minecraft:blasting",
-    "category": "building",
     "ingredient": "angelblock:diamond_powder_block",
     "result": {
         "id": "minecraft:diamond_block"
