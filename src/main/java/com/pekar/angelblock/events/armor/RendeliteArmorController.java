@@ -7,7 +7,7 @@ import com.pekar.angelblock.events.effect.base.ISwitchingEffectSynchronizer;
 import com.pekar.angelblock.events.effect.base.ITemporaryPersistentArmorEffect;
 import com.pekar.angelblock.events.effect.base.SwitchingEffectSynchronizer;
 import com.pekar.angelblock.events.player.IPlayer;
-import com.pekar.angelblock.keybinds.KeyRegistry;
+import com.pekar.angelblock.keybinds.KeyBindNames;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.effect.MobEffects;
@@ -176,14 +176,14 @@ public class RendeliteArmorController extends PlayerArmor
     }
 
     @Override
-    public void onKeyInputEvent(String pressedKeyDescription)
+    public void onKeyInputEvent(String pressedKeyBindName)
     {
-        if (pressedKeyDescription.equals(KeyRegistry.NIGHT_VISION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.NIGHT_VISION))
         {
             nightVisionEffect.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.JUMP_BOOST.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.JUMP_BOOST))
         {
             if (!jumpNegativeEffect.isAnyActive())
             {
@@ -191,7 +191,7 @@ public class RendeliteArmorController extends PlayerArmor
             }
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.LEVITATION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.SLOW_FALLING))
         {
             if (slowFallingEffect.isAvailable())
             {
@@ -202,17 +202,17 @@ public class RendeliteArmorController extends PlayerArmor
             }
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.GLOWING.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.GLOWING))
         {
             glowingEffect.trySwitch();
         }
 
-//        if (pressedKeyDescription.equals(KeyRegistry.GLOWING.getName()))
+//        if (pressedKeyDescription.equals(KeyBindNames.GLOWING))
 //        {
 //            damageArmor(true);
 //        }
 //
-//        if (pressedKeyDescription.equals(KeyRegistry.REGENERATION.getName()))
+//        if (pressedKeyDescription.equals(KeyBindNames.REGENERATION))
 //        {
 //            damageArmor(false);
 //        }

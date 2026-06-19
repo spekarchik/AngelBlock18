@@ -5,7 +5,7 @@ import com.pekar.angelblock.events.effect.*;
 import com.pekar.angelblock.events.effect.base.IPermanentArmorEffect;
 import com.pekar.angelblock.events.effect.base.ISwitchingArmorEffect;
 import com.pekar.angelblock.events.player.IPlayer;
-import com.pekar.angelblock.keybinds.KeyRegistry;
+import com.pekar.angelblock.keybinds.KeyBindNames;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.EquipmentSlot;
@@ -184,24 +184,24 @@ public class DiamiteArmorController extends PlayerArmor
     }
 
     @Override
-    public void onKeyInputEvent(String pressedKeyDescription)
+    public void onKeyInputEvent(String pressedKeyBindName)
     {
-        if (pressedKeyDescription.equals(KeyRegistry.NIGHT_VISION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.NIGHT_VISION))
         {
             nightVisionEffect.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.JUMP_BOOST.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.JUMP_BOOST))
         {
             jumpBoostEffect.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.LEVITATION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.SLOW_FALLING))
         {
             slowFallingEffect.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.GLOWING.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.GLOWING))
         {
             glowingEffect.trySwitch();
             // for tests

@@ -5,7 +5,7 @@ import com.pekar.angelblock.armor.PlayerArmorType;
 import com.pekar.angelblock.events.effect.*;
 import com.pekar.angelblock.events.effect.base.*;
 import com.pekar.angelblock.events.player.IPlayer;
-import com.pekar.angelblock.keybinds.KeyRegistry;
+import com.pekar.angelblock.keybinds.KeyBindNames;
 import com.pekar.angelblock.potions.PotionRegistry;
 import com.pekar.angelblock.utils.Utils;
 import net.minecraft.core.registries.Registries;
@@ -263,9 +263,9 @@ public class LymoniteArmorController extends PlayerArmor
     }
 
     @Override
-    public void onKeyInputEvent(String pressedKeyDescription)
+    public void onKeyInputEvent(String pressedKeyBindName)
     {
-        if (pressedKeyDescription.equals(KeyRegistry.REGENERATION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.REGENERATION))
         {
             if (regenerationEffect.isAvailable() && !regenerationEffect.isAnyActive() && player.getPlayerEntity().getHealth() < player.getPlayerEntity().getMaxHealth())
             {
@@ -276,12 +276,12 @@ public class LymoniteArmorController extends PlayerArmor
             }
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.NIGHT_VISION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.NIGHT_VISION))
         {
             nightVisionEffect.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.GLOWING.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.GLOWING))
         {
             glowingEffect.trySwitch();
             // for tests
@@ -289,7 +289,7 @@ public class LymoniteArmorController extends PlayerArmor
             //damageMainHandItem();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.JUMP_BOOST.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.JUMP_BOOST))
         {
             if (!jumpNegativeEffect.isAnyActive())
             {
