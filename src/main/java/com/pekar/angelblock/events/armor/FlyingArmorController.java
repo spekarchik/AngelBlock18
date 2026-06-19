@@ -9,7 +9,7 @@ import com.pekar.angelblock.events.effect.base.ISwitchingArmorEffect;
 import com.pekar.angelblock.events.effect.base.ISwitchingEffectSynchronizer;
 import com.pekar.angelblock.events.effect.base.SwitchingEffectSynchronizer;
 import com.pekar.angelblock.events.player.IPlayer;
-import com.pekar.angelblock.keybinds.KeyRegistry;
+import com.pekar.angelblock.keybinds.KeyBindNames;
 import com.pekar.angelblock.potions.PotionRegistry;
 import com.pekar.angelblock.utils.Utils;
 import net.minecraft.world.effect.MobEffects;
@@ -145,19 +145,19 @@ public class FlyingArmorController extends PlayerArmor
     }
 
     @Override
-    public void onKeyInputEvent(String pressedKeyDescription)
+    public void onKeyInputEvent(String pressedKeyBindName)
     {
-        if (pressedKeyDescription.equals(KeyRegistry.JUMP_BOOST.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.JUMP_BOOST))
         {
             speedEffect.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.SUPER_JUMP.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.SUPER_JUMP))
         {
             jumpBoostEffect.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.LEVITATION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.SLOW_FALLING))
         {
             slowFallingEffect.trySwitch();
 
@@ -171,7 +171,7 @@ public class FlyingArmorController extends PlayerArmor
         }
 
         // for tests
-//        if (pressedKeyDescription.equals(KeyRegistry.GLOWING.getName()))
+//        if (pressedKeyDescription.equals(KeyBindNames.GLOWING))
 //        {
 //            switchArmorDamage();
 //        }
