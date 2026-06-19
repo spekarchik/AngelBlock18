@@ -115,7 +115,8 @@ public class DevilBlockEntity extends BlockEntity implements ILivingDeathEventHa
             if (level.isClientSide() || !(getLevel() instanceof ServerLevel serverLevel))
                 return true;
 
-            interactionHandItemStack.setCount(interactionHandItemStack.getCount() - 1);
+            if (!player.isCreative())
+                interactionHandItemStack.shrink(1);
 
             var chunk = level.getChunk(pos);
             var entityType = monster.getEntityType();
