@@ -1,7 +1,8 @@
 ## 📦 Version 3.9.2
 
 ### 🐞 Fixed
-- Fixed *Diamond Powder Block* blasting recipe
+- Fixed a dedicated server compatibility issue where using a key binding caused a server error.
+- Fixed *Diamond Powder Block* blasting recipe.
 
 
 ## 📦 Version 3.9.1

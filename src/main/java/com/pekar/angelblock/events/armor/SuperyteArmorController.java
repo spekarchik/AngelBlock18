@@ -4,7 +4,7 @@ import com.pekar.angelblock.armor.PlayerArmorType;
 import com.pekar.angelblock.events.effect.*;
 import com.pekar.angelblock.events.effect.base.*;
 import com.pekar.angelblock.events.player.IPlayer;
-import com.pekar.angelblock.keybinds.KeyRegistry;
+import com.pekar.angelblock.keybinds.KeyBindNames;
 import com.pekar.angelblock.potions.PotionRegistry;
 import com.pekar.angelblock.utils.Utils;
 import net.minecraft.world.damagesource.DamageSource;
@@ -322,16 +322,16 @@ public class SuperyteArmorController extends PlayerArmor
     }
 
     @Override
-    public void onKeyInputEvent(String pressedKeyDescription)
+    public void onKeyInputEvent(String pressedKeyBindName)
     {
         var playerEntity = player.getPlayerEntity();
 
-        if (pressedKeyDescription.equals(KeyRegistry.NIGHT_VISION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.NIGHT_VISION))
         {
             nightVisionEffect.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.GLOWING.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.GLOWING))
         {
             glowingEffect.trySwitch();
             // for tests
@@ -339,7 +339,7 @@ public class SuperyteArmorController extends PlayerArmor
             //damageMainHandItem();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.REGENERATION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.REGENERATION))
         {
             if (regenerationEffect.isAvailable() && !regenerationEffect.isAnyActive() && playerEntity.getHealth() < playerEntity.getMaxHealth())
             {
@@ -358,7 +358,7 @@ public class SuperyteArmorController extends PlayerArmor
             }
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.JUMP_BOOST.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.JUMP_BOOST))
         {
             if (!jumpNegativeEffect.isAnyActive())
             {
@@ -385,7 +385,7 @@ public class SuperyteArmorController extends PlayerArmor
             }
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.LEVITATION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.SLOW_FALLING))
         {
             if (!levitationEffect.isOn() && levitationEffect.isAnyActive() && levitationEffect.isInfinite())
                 levitationEffect.forceRemove();
@@ -435,7 +435,7 @@ public class SuperyteArmorController extends PlayerArmor
             }
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.SUPER_JUMP.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.SUPER_JUMP))
         {
             superJumpEffect.trySwitch();
         }
