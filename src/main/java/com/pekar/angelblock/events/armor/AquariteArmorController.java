@@ -8,7 +8,7 @@ import com.pekar.angelblock.events.effect.base.ISwitchingArmorEffect;
 import com.pekar.angelblock.events.effect.base.ITemporaryArmorEffect;
 import com.pekar.angelblock.events.effect.base.ITemporaryPersistentArmorEffect;
 import com.pekar.angelblock.events.player.IPlayer;
-import com.pekar.angelblock.keybinds.KeyRegistry;
+import com.pekar.angelblock.keybinds.KeyBindNames;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageSource;
@@ -166,24 +166,24 @@ public class AquariteArmorController extends PlayerArmor
     }
 
     @Override
-    public void onKeyInputEvent(String pressedKeyDescription)
+    public void onKeyInputEvent(String pressedKeyBindName)
     {
-        if (pressedKeyDescription.equals(KeyRegistry.NIGHT_VISION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.NIGHT_VISION))
         {
             nightVisionEffect.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.GLOWING.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.GLOWING))
         {
             glowingEffect.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.JUMP_BOOST.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.JUMP_BOOST))
         {
             dolphinsGrace.trySwitch();
         }
 
-        if (pressedKeyDescription.equals(KeyRegistry.REGENERATION.getName()))
+        if (pressedKeyBindName.equals(KeyBindNames.REGENERATION))
         {
             if (regenerationEffect.isAvailable() && !regenerationEffect.isAnyActive() && player.getPlayerEntity().getHealth() < player.getPlayerEntity().getMaxHealth())
             {
@@ -193,7 +193,7 @@ public class AquariteArmorController extends PlayerArmor
         }
 
         // FOR TESTS
-//        if (pressedKeyDescription.equals(KeyRegistry.GLOWING.getName()))
+//        if (pressedKeyDescription.equals(KeyBindNames.GLOWING))
 //        {
 //            switchArmorDamage();
 //        }
