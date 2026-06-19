@@ -2,7 +2,6 @@
 
 ### 🐞 Fixed
 - Fixed a dedicated server compatibility issue where using a key binding caused a server error.
-- Fixed the **Diamond Powder Block** blasting recipe.
 
 ### 📝 Improvements
 - Items used on **The Block of Devil** are no longer consumed in *Creative Mode*.
