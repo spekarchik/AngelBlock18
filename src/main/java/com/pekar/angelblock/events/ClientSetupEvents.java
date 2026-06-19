@@ -30,8 +30,8 @@ public final class ClientSetupEvents
         event.register(KeyRegistry.SUPER_JUMP);
         event.register(KeyRegistry.GLOWING);
         event.register(KeyRegistry.REGENERATION);
-        event.register(KeyRegistry.LEVITATION);
-        event.register(KeyRegistry.SWORD_EFFECT);
+        event.register(KeyRegistry.SLOW_FALLING);
+        event.register(KeyRegistry.TOOL_MODE);
     }
 
     //@SubscribeEvent

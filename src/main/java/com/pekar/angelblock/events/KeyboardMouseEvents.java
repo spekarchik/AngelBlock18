@@ -1,6 +1,7 @@
 package com.pekar.angelblock.events;
 
 import com.pekar.angelblock.Main;
+import com.pekar.angelblock.keybinds.KeyBindNames;
 import com.pekar.angelblock.keybinds.KeyRegistry;
 import com.pekar.angelblock.network.ClientToServerPacket;
 import com.pekar.angelblock.network.packets.KeyPressedPacket;
@@ -29,43 +30,43 @@ public class KeyboardMouseEvents
     {
         if (KeyRegistry.JUMP_BOOST.isDown())
         {
-            var keyName = KeyRegistry.JUMP_BOOST.getName();
+            var keyName = KeyBindNames.JUMP_BOOST;
             trySendPacket(keyName, new KeyPressedPacket(keyName));
         }
 
         if (KeyRegistry.NIGHT_VISION.isDown())
         {
-            var keyName = KeyRegistry.NIGHT_VISION.getName();
+            var keyName = KeyBindNames.NIGHT_VISION;
             trySendPacket(keyName, new KeyPressedPacket(keyName));
         }
 
         if (KeyRegistry.GLOWING.isDown())
         {
-            var keyName = KeyRegistry.GLOWING.getName();
+            var keyName = KeyBindNames.GLOWING;
             trySendPacket(keyName, new KeyPressedPacket(keyName));
         }
 
         if (KeyRegistry.REGENERATION.isDown())
         {
-            var keyName = KeyRegistry.REGENERATION.getName();
+            var keyName = KeyBindNames.REGENERATION;
             trySendPacket(keyName, new KeyPressedPacket(keyName));
         }
 
-        if (KeyRegistry.LEVITATION.isDown())
+        if (KeyRegistry.SLOW_FALLING.isDown())
         {
-            var keyName = KeyRegistry.LEVITATION.getName();
+            var keyName = KeyBindNames.SLOW_FALLING;
             trySendPacket(keyName, new KeyPressedPacket(keyName));
         }
 
-        if (KeyRegistry.SWORD_EFFECT.isDown())
+        if (KeyRegistry.TOOL_MODE.isDown())
         {
-            var keyName = KeyRegistry.SWORD_EFFECT.getName();
+            var keyName = KeyBindNames.TOOL_MODE;
             trySendPacket(keyName, new ToolsModeChangePacket());
         }
 
         if (KeyRegistry.SUPER_JUMP.isDown())
         {
-            var keyName = KeyRegistry.SUPER_JUMP.getName();
+            var keyName = KeyBindNames.SUPER_JUMP;
             trySendPacket(keyName, new KeyPressedPacket(keyName));
         }
     }
