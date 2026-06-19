@@ -1,10 +1,10 @@
 package com.pekar.angelblock;
 
 import com.pekar.angelblock.armor.ArmorRegistry;
-import com.pekar.angelblock.armor.ModArmorMaterial;
 import com.pekar.angelblock.blocks.BlockRegistry;
 import com.pekar.angelblock.blocks.tile_entities.EntityRegistry;
-import com.pekar.angelblock.events.*;
+import com.pekar.angelblock.events.EventRegistry;
+import com.pekar.angelblock.events.ModDataComponents;
 import com.pekar.angelblock.items.ItemRegistry;
 import com.pekar.angelblock.menus.MenuRegistry;
 import com.pekar.angelblock.potions.PotionRegistry;
@@ -17,7 +17,8 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.inventory.MenuType;
-import net.minecraft.world.item.*;
+import net.minecraft.world.item.ArmorMaterial;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.alchemy.Potion;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
@@ -26,10 +27,10 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -94,9 +95,6 @@ public class Main
         ArmorRegistry.initStatic();
         ToolRegistry.initStatic();
         PotionRegistry.initStatic();
-
-        ClientSetupEvents.initStatic();
-        KeyboardMouseEvents.initStatic();
 
         RecipeRegistry.initStatic();
         MenuRegistry.initStatic();

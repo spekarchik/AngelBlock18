@@ -4,7 +4,6 @@ import com.pekar.angelblock.tooltip.ITooltip;
 import com.pekar.angelblock.tooltip.ITooltipProvider;
 import com.pekar.angelblock.tooltip.TextStyle;
 import net.minecraft.ChatFormatting;
-import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
@@ -28,7 +27,7 @@ public class AngelBlockItem extends ModBlockItem implements ITooltipProvider
     @Override
     public void addTooltip(ItemStack stack, TooltipContext context, ITooltip tooltip, TooltipFlag flag)
     {
-        if (!Screen.hasShiftDown() && !Screen.hasAltDown())
+        if (!flag.hasShiftDown() && !flag.hasAltDown())
         {
             tooltip.addLineById("description.common.press_shift_or_alt").apply();
             return;
@@ -36,7 +35,7 @@ public class AngelBlockItem extends ModBlockItem implements ITooltipProvider
 
         tooltip.ignoreEmptyLines();
 
-        if (Screen.hasShiftDown())
+        if (flag.hasShiftDown())
         {
             for (int i = 1; i <= 20; i++)
             {
@@ -57,7 +56,7 @@ public class AngelBlockItem extends ModBlockItem implements ITooltipProvider
             tooltip.addEmptyLine();
             tooltip.addLineById("description.common.press_alt").apply();
         }
-        else if (Screen.hasAltDown())
+        else if (flag.hasAltDown())
         {
             for (int i = 21; i <= 28; i++)
             {

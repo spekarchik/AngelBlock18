@@ -1,9 +1,9 @@
 package com.pekar.angelblock.network.packets;
 
+import com.pekar.angelblock.clientaccess.ClientAccessor;
 import com.pekar.angelblock.network.Packet;
 import com.pekar.angelblock.network.ServerToClientPacket;
 import com.pekar.angelblock.utils.SoundType;
-import net.minecraft.client.Minecraft;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
@@ -54,9 +54,7 @@ public class PlaySoundPacket extends ServerToClientPacket
     @Override
     public void onReceive(IPayloadContext context)
     {
-        var player = Minecraft.getInstance().player;
-        if (player != null)
-            player.playSound(soundEvent, 1.0F, pitch);
+        ClientAccessor.networkAccessor().playClientSound(soundEvent, 1.0F, pitch);
     }
 
     private SoundEvent getSound(SoundType soundType)
