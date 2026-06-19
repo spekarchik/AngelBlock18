@@ -1,7 +1,8 @@
-package com.pekar.angelblock.keybinds;
+package com.pekar.angelblock.client.keybinds;
 
 import com.mojang.blaze3d.platform.InputConstants;
 import com.pekar.angelblock.Main;
+import com.pekar.angelblock.keybinds.KeyBindNames;
 import net.minecraft.client.KeyMapping;
 
 import static com.pekar.angelblock.utils.Resources.createResourceLocation;

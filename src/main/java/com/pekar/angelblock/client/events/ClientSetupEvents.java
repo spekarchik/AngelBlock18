@@ -1,7 +1,7 @@
-package com.pekar.angelblock.events;
+package com.pekar.angelblock.client.events;
 
 import com.pekar.angelblock.Main;
-import com.pekar.angelblock.keybinds.KeyRegistry;
+import com.pekar.angelblock.client.keybinds.KeyRegistry;
 import com.pekar.angelblock.potions.PotionRegistry;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;

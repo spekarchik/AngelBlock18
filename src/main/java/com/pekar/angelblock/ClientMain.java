@@ -2,6 +2,8 @@ package com.pekar.angelblock;
 
 import com.pekar.angelblock.client.NetworkClientAccessor;
 import com.pekar.angelblock.clientaccess.ClientAccessor;
+import com.pekar.angelblock.client.events.ClientSetupEvents;
+import com.pekar.angelblock.client.events.KeyboardMouseEvents;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
@@ -15,6 +17,13 @@ public class ClientMain
 {
     public ClientMain(ModContainer container)
     {
+        initializeRegistry();
+    }
+
+    private void initializeRegistry()
+    {
+        ClientSetupEvents.initStatic();
+        KeyboardMouseEvents.initStatic();
     }
 
     @SubscribeEvent

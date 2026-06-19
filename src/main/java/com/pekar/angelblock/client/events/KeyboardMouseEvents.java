@@ -1,8 +1,8 @@
-package com.pekar.angelblock.events;
+package com.pekar.angelblock.client.events;
 
 import com.pekar.angelblock.Main;
 import com.pekar.angelblock.keybinds.KeyBindNames;
-import com.pekar.angelblock.keybinds.KeyRegistry;
+import com.pekar.angelblock.client.keybinds.KeyRegistry;
 import com.pekar.angelblock.network.ClientToServerPacket;
 import com.pekar.angelblock.network.packets.KeyPressedPacket;
 import com.pekar.angelblock.network.packets.ToolsModeChangePacket;
