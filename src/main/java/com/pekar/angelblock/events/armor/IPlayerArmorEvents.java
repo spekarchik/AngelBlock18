@@ -13,7 +13,7 @@ public interface IPlayerArmorEvents
     void onLivingEquipmentChangeEvent(LivingEquipmentChangeEvent event);
     void onLivingJumpEvent(LivingEvent.LivingJumpEvent event);
     void onLivingFallEvent(LivingFallEvent event);
-    void onKeyInputEvent(String pressedKeyDescription);
+    void onKeyInputEvent(String pressedKeyBindName);
     void onEntityTravelToDimensionEvent(EntityTravelToDimensionEvent event);
     void onPlayerChangedDimensionEvent(PlayerEvent.PlayerChangedDimensionEvent event);
     void onBreakSpeed(PlayerEvent.BreakSpeed event);
