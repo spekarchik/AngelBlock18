@@ -4,9 +4,7 @@ import com.mojang.serialization.MapCodec;
 import com.pekar.angelblock.armor.ArmorRegistry;
 import com.pekar.angelblock.blocks.BlockRegistry;
 import com.pekar.angelblock.blocks.tile_entities.EntityRegistry;
-import com.pekar.angelblock.events.ClientSetupEvents;
 import com.pekar.angelblock.events.EventRegistry;
-import com.pekar.angelblock.events.KeyboardMouseEvents;
 import com.pekar.angelblock.events.ModDataComponents;
 import com.pekar.angelblock.items.ItemRegistry;
 import com.pekar.angelblock.loot.LootRegistry;
@@ -100,9 +98,6 @@ public class Main
         ArmorRegistry.initStatic();
         ToolRegistry.initStatic();
         PotionRegistry.initStatic();
-
-        ClientSetupEvents.initStatic();
-        KeyboardMouseEvents.initStatic();
 
         RecipeRegistry.initStatic();
         MenuRegistry.initStatic();

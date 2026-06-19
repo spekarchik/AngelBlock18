@@ -1,3 +1,9 @@
+## 📦 Version 3.9.2
+
+### 🐞 Fixed
+- Fixed a dedicated server compatibility issue where using a key binding caused a server error.
+
+
 ## 📦 Version 3.9.1
 
 ### 🐞 Fixed
