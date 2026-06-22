@@ -53,8 +53,8 @@ public class MarineRod extends AncientRod
                 BlockPos upPos = pos.above();
 
                 if ((level.isWaterAt(upPos) && !level.getBlockState(upPos).getFluidState().isSource()) || ((level.isEmptyBlock(upPos))
-                        && ((utils.blocks.types.isFarmTypeBlock(level, upPos.north()) && utils.blocks.types.isFarmTypeBlock(level, upPos.south()))
-                        || (utils.blocks.types.isFarmTypeBlock(level, upPos.east()) && utils.blocks.types.isFarmTypeBlock(level, upPos.west())))))
+                        && ((utils.blocks.types.allowsWaterPlacementBetween(level, upPos.north()) && utils.blocks.types.allowsWaterPlacementBetween(level, upPos.south()))
+                        || (utils.blocks.types.allowsWaterPlacementBetween(level, upPos.east()) && utils.blocks.types.allowsWaterPlacementBetween(level, upPos.west())))))
                 {
                     if (!isClientSide)
                     {
