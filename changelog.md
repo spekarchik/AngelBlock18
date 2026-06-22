@@ -2,6 +2,8 @@
 
 ### 🐞 Fixed
 - Fixed **Aquarite Hoe** in *Enhanced Mode* only extracting *Hanging Roots* from the targeted *Rooted Dirt* block instead of the entire area of effect.
+- Fixed an issue where magic rods could not plant *Sweet Berry Bush* on *Dirt*.
+- Fixed magic rods and **Aquarite Hoe** not placing water between *Podzol*, *Mycelius*, *Moss-type*, or *Mud-type* blocks.
 
 ### 🛠️ Changes
 - Moved **Sugar Cane** planting ability from **Rod of Terra** to **Water Rod** and higher-tier rods.
