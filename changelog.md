@@ -1,3 +1,10 @@
+## 📦 Version 3.10.0
+
+### 🛠️ Changes
+- Moved **Sugar Cane** planting ability from **Rod of Terra** to **Water Rod** and higher-tier rods.
+- Added missing **Sugar Cane** planting information to the **Water Rod** and higher-tier rods tooltip.
+
+
 ## 📦 Version 3.9.2
 
 ### 🐞 Fixed
