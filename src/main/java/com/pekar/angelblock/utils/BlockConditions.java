@@ -66,7 +66,7 @@ public class BlockConditions
 
         var soilBlockState = level.getBlockState(pos);
 
-        return soilBlockState.is(BlockTags.DIRT) || soilBlockState.is(BlockTags.SAND);
+        return soilBlockState.is(BlockTags.SUBSTRATE_OVERWORLD) || soilBlockState.is(BlockTags.SAND);
     }
 
     public final boolean canSustainBamboo(Level level, BlockPos pos)
@@ -89,7 +89,7 @@ public class BlockConditions
         }
         else if (plantBlockState.is(Blocks.SWEET_BERRY_BUSH))
         {
-            return soilBlockState.is(BlockTags.DIRT) || soilBlockState.is(Blocks.FARMLAND);
+            return soilBlockState.is(BlockTags.SUBSTRATE_OVERWORLD) || soilBlockState.is(Blocks.FARMLAND);
         }
         else if (plantBlockState.is(Blocks.SUGAR_CANE))
         {
