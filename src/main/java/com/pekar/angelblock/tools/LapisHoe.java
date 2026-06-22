@@ -27,7 +27,7 @@ public class LapisHoe extends EnhancedHoe
 
         var blockState = level.getBlockState(pos);
 
-        if (utils.blocks.types.canBeFarmland(blockState))
+        if (utils.blocks.types.canTurnIntoFarmland(blockState))
         {
             if (!level.isClientSide())
             {
