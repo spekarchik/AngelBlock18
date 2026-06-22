@@ -26,9 +26,8 @@ public class LapisHoe extends EnhancedHoe
         if (!level.isEmptyBlock(pos.above())) return false;
 
         var blockState = level.getBlockState(pos);
-        Block block = blockState.getBlock();
 
-        if (utils.blocks.types.canBeFarmland(block))
+        if (utils.blocks.types.canBeFarmland(blockState))
         {
             if (!level.isClientSide())
             {
@@ -40,11 +39,15 @@ public class LapisHoe extends EnhancedHoe
 
             return true;
         }
-        else if (block == Blocks.COARSE_DIRT)
+        else if (blockState.is(Blocks.COARSE_DIRT) || blockState.is(Blocks.ROOTED_DIRT))
         {
             if (!level.isClientSide())
             {
                 setBlockWithClientSound(player, pos, Blocks.DIRT);
+                if (blockState.is(Blocks.ROOTED_DIRT))
+                {
+                    Block.popResourceFromFace(level, pos, Direction.UP, new ItemStack(Blocks.HANGING_ROOTS));
+                }
                 damageMainHandItemIfSurvivalIgnoreClient(player, level);
             }
 
