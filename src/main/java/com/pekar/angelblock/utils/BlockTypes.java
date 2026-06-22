@@ -106,9 +106,9 @@ public class BlockTypes
                 || block == Blocks.SCULK_SENSOR || block == Blocks.SCULK_SHRIEKER;
     }
 
-    public boolean canBeFarmland(Block block)
+    public boolean canBeFarmland(BlockState blockState)
     {
-        return block == Blocks.GRASS_BLOCK || block == Blocks.DIRT_PATH || block == Blocks.DIRT;
+        return blockState.is(Blocks.GRASS_BLOCK) || blockState.is(Blocks.DIRT_PATH) || blockState.is(Blocks.DIRT);
     }
 
     public Block getDestroyingWoolBlock(Block block)
