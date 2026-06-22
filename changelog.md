@@ -1,5 +1,8 @@
 ## 📦 Version 3.10.0
 
+### 🐞 Fixed
+- Fixed **Aquarite Hoe** in *Enhanced Mode* only extracting *Hanging Roots* from the targeted *Rooted Dirt* block instead of the entire area of effect.
+
 ### 🛠️ Changes
 - Moved **Sugar Cane** planting ability from **Rod of Terra** to **Water Rod** and higher-tier rods.
 - Added missing **Sugar Cane** planting information to the **Water Rod** and higher-tier rods tooltip.
