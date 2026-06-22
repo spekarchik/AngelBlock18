@@ -66,6 +66,12 @@ public class MarineRod extends AncientRod
 
                     return getToolInteractionResult(true, isClientSide);
                 }
+
+                if (utils.blocks.conditions.canSustainSugarCane(level, pos))
+                {
+                    damageMainHandItemIfSurvivalIgnoreClient(player, level);
+                    return plant(player, level, pos, hand, facing, Blocks.SUGAR_CANE);
+                }
             }
 
             if (block == Blocks.MELON)
@@ -117,7 +123,7 @@ public class MarineRod extends AncientRod
     {
         super.appendPlacingBlockInfo(tooltip, false);
 
-        for (int i = 2; i <= 5; i++)
+        for (int i = 2; i <= 6; i++)
         {
             tooltip.addLine(getRodDescriptionId(), i).withFormatting(ChatFormatting.WHITE, selectAsNew).apply();
         }
