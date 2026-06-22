@@ -84,7 +84,7 @@ public class BlockTypes
     public boolean isFarmTypeBlock(Level level, BlockPos pos)
     {
         var blockState = level.getBlockState(pos);
-        return blockState.is(Blocks.GRASS_BLOCK) || blockState.is(BlockTags.DIRT) || blockState.is(Blocks.FARMLAND)
+        return blockState.is(BlockTags.SUBSTRATE_OVERWORLD) || blockState.is(Blocks.FARMLAND)
                 || blockState.is(BlockTags.SAND) || blockState.is(Blocks.GRAVEL) || blockState.is(Blocks.SUSPICIOUS_GRAVEL);
     }
 
