@@ -83,7 +83,7 @@ public class BlockTypes
         return block == Blocks.GLASS || block == Blocks.TINTED_GLASS || block instanceof StainedGlassBlock;
     }
 
-    public boolean isFarmTypeBlock(Level level, BlockPos pos)
+    public boolean allowsWaterPlacementBetween(Level level, BlockPos pos)
     {
         var blockState = level.getBlockState(pos);
         return blockState.is(Blocks.GRASS_BLOCK) || blockState.is(BlockTags.DIRT) || blockState.is(Blocks.FARMLAND)
@@ -106,7 +106,7 @@ public class BlockTypes
                 || block == Blocks.SCULK_SENSOR || block == Blocks.SCULK_SHRIEKER;
     }
 
-    public boolean canBeFarmland(BlockState blockState)
+    public boolean canTurnIntoFarmland(BlockState blockState)
     {
         return blockState.is(Blocks.GRASS_BLOCK) || blockState.is(Blocks.DIRT_PATH) || blockState.is(Blocks.DIRT);
     }
