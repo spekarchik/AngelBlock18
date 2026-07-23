@@ -1,3 +1,10 @@
+## 📦 Version 3.10.1
+
+### 🛠️ Changes
+- **Amethyst Rod** renamed to **Rod of the Depths**.
+- **Magnetic Amethyst Rod** renamed to **Magnetic Rod of the Depths**.
+
+
 ## 📦 Version 3.10.0
 
 ### 🐞 Fixed
