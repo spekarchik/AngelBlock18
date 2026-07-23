@@ -1,5 +1,8 @@
 ## 📦 Version 3.10.1
 
+### 🐞 Fixed
+- Corrected tooltips in the *Belarusian* localization.
+
 ### 🛠️ Changes
 - **Amethyst Rod** renamed to **Rod of the Depths**.
 - **Magnetic Amethyst Rod** renamed to **Magnetic Rod of the Depths**.
