@@ -124,7 +124,7 @@ No complexity — just meaningful upgrades.
 
 A core system of the mod is a progression of **5 elemental rods**:
 
-- Earth → Water → Fire → Amethyst → End  
+- Earth → Water → Fire → Depths → End
 
 Each rod upgrades the previous one, inheriting all abilities and adding new ones.
 
