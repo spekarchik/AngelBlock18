@@ -170,7 +170,7 @@ public class PlayerInteractionEvents implements IEventHandler
     }
 
     @SubscribeEvent
-    public void onLivingInteractionEvent(PlayerInteractEvent.EntityInteractSpecific event)
+    public void onLivingInteractionEvent(PlayerInteractEvent.EntityInteract event)
     {
         if (!(event.getTarget() instanceof LivingEntity target)) return;
         if (target instanceof Player) return;
