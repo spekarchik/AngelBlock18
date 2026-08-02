@@ -1,3 +1,11 @@
+## 📦 Version 3.10.2
+
+### ⚙️ Changed
+- Added an upper NeoForge version limit to prevent crashes caused by breaking API changes introduced in **NeoForge 26.2.0.43-beta**.
+- This version supports NeoForge versions from **26.2.0.0-beta up to, but not including, 26.2.0.43-beta**.
+- ⚠️ For NeoForge **26.2.0.43-beta or newer**, use version **3.10.3-alpha**.
+
+
 ## 📦 Version 3.10.1
 
 ### 🐞 Fixed
