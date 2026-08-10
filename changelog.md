@@ -1,3 +1,9 @@
+## 📦 Version 3.10.4
+
+- Released as stable following the official NeoForge release for Minecraft 26.2.
+- Requires NeoForge **26.2.0.43-beta or newer**.
+
+
 ## 📦 Version 3.10.4-alpha
 
 ### ⚙️ Updated
